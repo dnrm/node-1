@@ -1,7 +1,7 @@
 # NodeJS Rest API 🔥
 By Daniel Medina
 
-**⚠ Note:** this poroject is no longer being worked on. It was uploaded to GitHub after completion/
+**⚠ Note:** this poroject is no longer being worked on. It was uploaded to GitHub after completion
 
 <hr>
 
