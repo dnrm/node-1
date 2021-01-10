@@ -1,5 +1,6 @@
 "use strict"
 
+require('dotenv').config();
 var mongoose = require('mongoose');
 const cors = require('cors');
 let app = require('./app');
