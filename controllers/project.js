@@ -75,7 +75,7 @@ let controller = {
         let update = req.body;
 
         Project.findOneAndUpdate(projectId, update, {new: true}, (err, projectUpdated) => {
-            if (err) return res.status(500).send({message: 'Error updating project'});
+            if (err) return res.status(500).send({message: 'Error updating project', error: err});
             if (!projectUpdated) return res.status(404).send({message: 'Proejct does not exist'});
             return res.status(200).send({
                 project: projectUpdated
@@ -97,6 +97,7 @@ let controller = {
     uploadImage: function(req, res) {
         let projectId = req.params.id;
         if (req.files) {
+            console.log('files: ' + req.files);
             let filePath = req.files.image.path;
             let fileSplit = filePath.split('\\');
             let fileName = fileSplit[1];
@@ -120,6 +121,7 @@ let controller = {
                 })
             }
         } else {
+            console.log('files' + req.files);
             return res.status(500).send({
                 message: 'Image not uploaded'
             })
