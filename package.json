@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "start:prod": "NODE_ENV=production nodemon index.js"
   },
   "author": "Daniel Medina",
   "license": "MIT",
